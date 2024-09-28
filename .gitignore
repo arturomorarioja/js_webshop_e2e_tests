@@ -1,0 +1,4 @@
+cypress/downloads
+cypress/fixtures
+cypress/support/e2e.js
+node_modules

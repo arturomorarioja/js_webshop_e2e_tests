@@ -1,0 +1,79 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "lmadsen@mail.com",
+      "pwd": "pepe"
+    },
+    {
+      "id": "2",
+      "email": "a@a.com",
+      "pwd": "pepe"
+    },
+    {
+      "id": "3",
+      "email": "b@b.com",
+      "pwd": "pepe"
+    },
+    {
+      "id": "4",
+      "email": "c@c.com",
+      "pwd": "pepe"
+    },
+    {
+      "id": "5",
+      "email": "test@kea.dk",
+      "pwd": "Test"
+    },
+    {
+      "id": "6",
+      "email": "l@l.com",
+      "pwd": "pepe"
+    },
+    {
+      "id": "7",
+      "email": "test@kea.dk",
+      "pwd": "Test"
+    },
+    {
+      "id": "8",
+      "email": "test@kea.dk",
+      "pwd": "Test"
+    },
+    {
+      "id": "9",
+      "email": "test@kea.dk",
+      "pwd": "Test"
+    },
+    {
+      "id": "10",
+      "email": "test@kea.dk",
+      "pwd": "Test"
+    },
+    {
+      "id": "11",
+      "email": "test@kea.dk",
+      "pwd": "Test"
+    },
+    {
+      "id": "12",
+      "email": "test@kea.dk",
+      "pwd": "Test"
+    },
+    {
+      "id": "13",
+      "email": "test@kea.dk",
+      "pwd": "Test"
+    },
+    {
+      "id": "14",
+      "email": "test@kea.dk",
+      "pwd": "Test"
+    },
+    {
+      "id": "15",
+      "email": "m@m.com",
+      "pwd": "pepe"
+    }
+  ]
+}
