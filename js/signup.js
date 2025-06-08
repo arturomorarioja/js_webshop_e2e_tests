@@ -29,11 +29,6 @@ document.querySelector('#frmSignup').addEventListener('submit', function(e) {
     }
 
     function insertUser(email, pwd, id) {
-        const params = new URLSearchParams();
-        params.append('id', String(id));
-        params.append('email', email);
-        params.append('pwd', pwd);
-
         const user = {
             id: String(id),
             email,
@@ -45,10 +40,8 @@ document.querySelector('#frmSignup').addEventListener('submit', function(e) {
             mode: 'cors',
             headers: {
                 'Content-Type': 'application/json'
-                // 'Content-Type': 'application/x-www-form-urlencoded'
             },
             body: JSON.stringify(user)
-            // body: params
         }).then((response) => { 
             console.log(response); 
             alert('The sign up was successful');
