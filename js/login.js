@@ -5,9 +5,10 @@ document.querySelector('#frmLogin').addEventListener('submit', function(e) {
 
     const email = this.elements.email.value;
 
-    fetch(baseUrl + '/users?q=' + email)
+    fetch(baseUrl + '/users?email=' + encodeURIComponent(email))
     .then(response => response.json())
     .then((data) => {
+        console.log(data);
         if (data.length === 0) {
             alert('Incorrect credentials');
         } else {

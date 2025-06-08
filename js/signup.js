@@ -34,13 +34,21 @@ document.querySelector('#frmSignup').addEventListener('submit', function(e) {
         params.append('email', email);
         params.append('pwd', pwd);
 
+        const user = {
+            id: String(id),
+            email,
+            pwd
+        };
+
         fetch(baseUrl + '/users', {
             method: 'POST',
             mode: 'cors',
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
+                'Content-Type': 'application/json'
+                // 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: params
+            body: JSON.stringify(user)
+            // body: params
         }).then((response) => { 
             console.log(response); 
             alert('The sign up was successful');
