@@ -6,7 +6,7 @@ describe('Webshop tests', () => {
     });
     
     it('Full business path', () => {
-        const USERNAME = 'test@kea.dk';
+        const USERNAME = 'test@ek.dk';
         const PASSWORD = 'Test';
 
         /**
@@ -17,9 +17,11 @@ describe('Webshop tests', () => {
         cy.get('#txtPassword').type(PASSWORD);        
         cy.get('#txtRepeatPassword').type(PASSWORD);
         cy.get('#frmSignup input[type="submit"]').click();
-        cy.on('window:alert', text => {
-            expect(text).to.contains('successful');
-        });
+        cy.get('dialog#alert').should('be.visible')
+            .within(() => {
+                cy.get('p').should('contain', 'successful');
+                cy.get('header button').click();
+            });
 
         /**
          *  Log in
@@ -88,7 +90,7 @@ describe('Webshop tests', () => {
         cy.get('#optCart > a').click();
 
         cy.get('#alert section p').should('contain', 'empty');
-        cy.get('#alert a[title="Close Alert"]').click();
+        cy.get('#alert header button').click();
 
         /**
          *  Log out
